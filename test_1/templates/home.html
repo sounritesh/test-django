@@ -10,7 +10,9 @@
 
 <ul>
     {% for item in my_list %}
-    <li>{{forloop.counter}}.{{item}}</li>
+        {% if item == 'Eggs' %}
+            <li>{{forloop.counter}}.{{item}}</li>
+        {% endif %}
     {% endfor %}
 </ul>
 {% endblock %}
